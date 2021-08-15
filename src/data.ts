@@ -99,7 +99,7 @@ export const socialLink = {
   mail: "pabloluqueromero3@gmail.com",
   linkedin: "https://www.linkedin.com/in/pluquer/",
   github: "https://github.com/pabloluqueromero",
-  cv: "PABLO_LUQUE_CV.pdf"
+  cv: "CV_PABLO_LUQUE.pdf"
 }
 
 
