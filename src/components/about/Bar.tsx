@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import Utils from "../Utils";
 
-function Bar(props: {skill: { tool: string; icon: string; level: string },index:number}) {
+function Bar(props: {skill: { tool: string, level: string },index:number}) {
 
   const [refBar, inViewBar, entryBar] = useInView({
     triggerOnce: true

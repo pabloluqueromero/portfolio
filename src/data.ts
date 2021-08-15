@@ -1,8 +1,8 @@
 export const home: string[] = [
   "Hi there 👋🏼, I am",
   "Pablo Luque.",
-  "Data scientist in the making.",
-  "I am computer science graduate currently working as a software engineer at a medium-size coorporation. My true passion is data science, machine learning, deep learning and I am currently doing a master to keep learning!"
+  "Software Engineer with a passion for Artificial Intelligence!",
+  "I am computer science graduate currently working as a software engineer at a large consuting coorporation. I have a passion for data science, machine learning, deep learning and I am currently doing a master to keep learning!"
 ]
 
 export const languages: { language: string, icon: string }[] = [
@@ -12,32 +12,31 @@ export const languages: { language: string, icon: string }[] = [
   { language: "Italian", icon: "languages/italian.png" },
 ]
 export const education: { school: string, year: string, title: string, grade: string, description: string }[] = [
-  { school: "Universidad Menéndez Pelayo", year: "2021 - 2023", title: "Master's degree in AI Research", grade: "In progres...", description: "Lorem ipsumasdasd.amsd dsfadsf asdjfa,smnd fkjasdf asdnc kaj dva sdjk asd.cn kjsd cckas d ñaksdj kasd cksd ckad scka sdc kjasdcjsd cadkj " },
-  { school: "Universidad de Castilla La Mancha", year: "2017 - 2021", title: "Bachelor's degree in Computer Science", grade: "9.52/10", description: "Lorem ipsumasdasd.amsd dsfadsf asdjfa,smnd fkjasdf asdnc kaj dva sdjk asd.cn kjsd cckas d ñaksdj kasd cksd ckad scka sdc kjasdcjsd cadkj " },
-  { school: "Centre International de Valbonne", year: "2012 - 2015", title: "Baccalauréat Économique et Scientifique", grade: "17.5/20", description: "Lorem ipsumasdasd.amsd dsfadsf asdjfa,smnd fkjasdf asdnc kaj dva sdjk asd.cn kjsd cckas d ñaksdj kasd cksd ckad scka sdc kjasdcjsd cadkj " }
+  { school: "Universidad Menéndez Pelayo", year: "2021 - 2023", title: "Master's degree in AI Research", grade: "In progres...", description: "Deep Learning, Supervised & Unsupervised Learning, NLP, Recommendation Systems..." },
+  { school: "Universidad de Castilla La Mancha", year: "2017 - 2021", title: "Bachelor's degree in Computer Science", grade: "9.52/10", description: "Concurrent Systems, Data Mining, Intelligent Systems, Databases, Calculus, Algebra, Statistics, Operating Systems, Software Engineering, Distributed Systems..." },
+  { school: "Centre International de Valbonne", year: "2012 - 2015", title: "Baccalauréat Économique et Scientifique", grade: "17.5/20", description: "Mathematics, Statistics, Economics..." }
 ]
 
 export const about: string = `
-Hi, my name is Pablo. As a kid I moved  abroad and spent 6 years studying, training and living in different countries for which I can speak 4 languages fluently (and a bit of German).
+Hi, my name is Pablo. After graduating from a Bachelor's degree in Computer Science, I am now pursuing a Masters in Artificial Intelligence Research while I work as a Software Engineer.
+Although I have only been working for a year, I have worked in Agile teams, built web services (REST & SOAP), created batch processes, worked with the cloud-based application, AWS and many more...
 <br/>
 <br/>
-After studying graduating from a Computer Science degree in 2021, I am now pursuing a Masters in Artificial Intelligence Research while I work as a Software Engineer.
-Although I have only been working for a year  I have worked in Agile teams, building web services (REST & SOAP), batch processes, AWS and many more... 
+As a kid I moved  abroad and spent 6 years studying, training and living in different countries for which I can speak 4 languages fluently (and a bit of German). I would define myself as a very open-minded person with a great ability to solve problems and, most importantly, with great curiosity (especially when it comes to technologies and algorithms).
 <br/>
 <br/>
-<a href="#bachelorproject" class="paragraph-link" >bachelor's final degree project</a> I studied and propose algorithms to automate feature engineering for the construction of logical features. I am familiar  with the most common Machine Learning libraries and I am currently studying Hadoop!
+During my Bachelor's degree I specialised in Artificial Intelligence, focusing on algorithms designs, Machine Learning, Metaheuristics, Knowledge-based Systems among others. For my
+<a href="#bachelorproject" class="paragraph-link" >bachelor's degree final degree project</a> I studied, proposed and coded algorithms to automate feature engineering for the construction of logical features. 
 `
 
-export const skills: { tool: string, icon: string, level:string }[] = [
-  { tool: "Python", icon: "tools/python.png",level:'90%' },
-  { tool: "Spring", icon: "tools/spring.png" ,level:'100%' },
-  { tool: "Node", icon: "tools/node.png",level:'10%' },
-  { tool: "Aws", icon: "tools/aws.png",level:'20%' },
-  { tool: "Postgres", icon: "tools/postgres.png",level:'80%' },
-  { tool: "Java", icon: "tools/java.png" ,level:'30%' },
-  { tool: "Gitlab", icon: "tools/gitlab.png" ,level:'40%' },
-  { tool: "React", icon: "tools/react.png" ,level:'50%' }
-
+export const skills: { tool: string, level:string }[] = [
+  { tool: "Python", level:'95%' },
+  { tool: "Java", level:'90%' },
+  { tool: "C", level:'70%' },
+  { tool: "Tensorflow", level:'70%' },
+  { tool: "Sklearn", level:'90%' },
+  { tool: "Spring", level:'80%' },
+  { tool: "SQL", level:'85%' }
 ]
 
 
@@ -87,7 +86,7 @@ export const projects: {
         "Responsive single-page application developped using Nodejs, Bootstrap and MongoDB.",
       image: "portfolio.png",
       alt: "Home page shop",
-      link: "#",
+      link: "",
       code:"#",
       status: "Completed",
     },
