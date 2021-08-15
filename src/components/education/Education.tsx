@@ -1,5 +1,4 @@
 import React from "react";
-import { AcademicCapIcon } from "@heroicons/react/solid";
 import { education } from "../../data";
 import "./Education.scss";
 import { useInView } from "react-intersection-observer";
