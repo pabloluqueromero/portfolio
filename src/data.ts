@@ -56,8 +56,8 @@ export const projects: {
         "Classic Snake Game with different players using search algorithms, naive approaches, and Neural Nets!",
       image: "projects/snake.jpg",
       alt: "Snake Game",
-      link: "#",
-      code: "#",
+      link: "https://pabloluqueromero.github.io/ia-snake-react",
+      code: "https://github.com/pabloluqueromero/ia-snake-react",
       status: "In progress",
     },
     {
@@ -76,8 +76,8 @@ export const projects: {
         "Responsive portfolio built from scratch using React Native, Hooks and SASS! ",
       image: "projects/portfolio.png",
       alt: "Portfolio image react",
-      link: "#",
-      code:"#",
+      link: "https://pabloluqueromero.github.io/portfolio",
+      code:"https://github.com/pabloluqueromero/portfolio",
       status: "Completed",
     },
     {
@@ -87,7 +87,7 @@ export const projects: {
       image: "projects/mtracing.png",
       alt: "Home page shop",
       link: "",
-      code:"#",
+      code:"https://github.com/pabloluqueromero/mtracing",
       status: "Completed",
     },
   ];

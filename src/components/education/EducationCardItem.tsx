@@ -13,9 +13,9 @@ function EducationCardItem(props: {
     description: string;
   };
 }) {
-  const [refCard, inViewCard, entryCard] = useInView({ threshold: 0.2 });
-  const [refCap, inViewCap, entryCap] = useInView({ threshold: 0.2 });
-  const [refContent, inViewContent, entryContent] = useInView({ threshold: 0.2 });
+  const [refCard, inViewCard, entryCard] = useInView({ threshold: 0.2, triggerOnce:true });
+  const [refCap, inViewCap, entryCap] =  useInView({ threshold: 0.2, triggerOnce:true });
+  const [refContent, inViewContent, entryContent] =  useInView({ threshold: 0.2, triggerOnce:true });
 
   return (
     <div

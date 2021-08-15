@@ -16,14 +16,14 @@
 .home-welcomemessage-line-1 {
     color: $active;
     opacity: 0;
-    animation: initialtext 1s;
+    animation: initialtext 600ms 1000ms;
     animation-fill-mode: forwards;
 }
 
 .home-welcomemessage-line-2 {
     opacity: 0;
     color: $text-dark;
-    animation: initialtext 1s 300ms;
+    animation: initialtext 600ms 1300ms;
     animation-fill-mode: forwards;
 }
 
@@ -31,7 +31,7 @@
     opacity: 0;
     color: $text-light;
     font-weight: bold;
-    animation: initialtext 1s 600ms;
+    animation: initialtext 600ms 1600ms;
     animation-fill-mode: forwards;
 }
 
@@ -42,14 +42,14 @@
     font-family: "Rubik", sans-serif;
     margin-top: 1rem;
     max-width: 600px;
-    animation: initialtext 1s 800ms;
+    animation: initialtext 600ms 1800ms;
     animation-fill-mode: forwards;
 }
 
 .explore-button {
     margin-left: auto;
     opacity: 0;
-    animation: initialtext 1s 1200ms forwards;
+    animation: initialtext 600ms 2200ms forwards;
 }
 
 @keyframes initialtext {

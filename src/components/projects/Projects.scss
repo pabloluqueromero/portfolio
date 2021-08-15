@@ -81,7 +81,7 @@ z .vertical-divider {
 .project-card-description {
     position: absolute;
     inset: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.733);
     opacity: 0;
     color: rgb(255, 255, 255);
     @extend .flex-center;
