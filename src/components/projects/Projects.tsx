@@ -7,7 +7,7 @@ import "./Projects.scss";
 export default function Projects() {
   const [refSection, inViewSection, entrySection] = useInView({
     triggerOnce: true,
-    threshold: 0.4,
+    threshold: 0.2
   });
   return (
     <section className="section-container" id="projects">
