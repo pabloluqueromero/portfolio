@@ -33,12 +33,12 @@ a:visited {
     @extend .flex-center;
     position: relative;
     min-height: 90vh;
+    margin-bottom: 5rem;
 }
 
 .section-subcontainer {
     max-width: 60%;
     margin: auto;
-    margin-bottom: 5rem;
 }
 
 .section-container-title {
