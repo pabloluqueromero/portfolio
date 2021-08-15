@@ -2,7 +2,7 @@ export const home: string[] = [
   "Hi there 👋🏼, I am",
   "Pablo Luque.",
   "Software Engineer with a passion for Artificial Intelligence!",
-  "I am computer science graduate currently working as a software engineer at a large consuting coorporation. I have a passion for data science, machine learning, deep learning and I am currently doing a master to keep learning!"
+  "I am computer science graduate currently working as a Software Engineer at a large consulting coorporation. I have a passion for data science, machine learning, deep learning and I am currently doing a master to acquire more knowledge!"
 ]
 
 export const languages: { language: string, icon: string }[] = [
@@ -26,7 +26,7 @@ As a kid I moved  abroad and spent 6 years studying, training and living in diff
 <br/>
 <br/>
 During my Bachelor's degree I specialised in Artificial Intelligence, focusing on algorithms designs, Machine Learning, Metaheuristics, Knowledge-based Systems among others. For my
-<a href="#bachelorproject" class="paragraph-link" >bachelor's degree final degree project</a> I studied, proposed and coded algorithms to automate feature engineering for the construction of logical features. 
+<a href="https://github.com/pabloluqueromero/TFG" class="paragraph-link" >bachelor's degree final degree project</a> I studied, proposed and coded algorithms to automate feature engineering for the construction of logical features. 
 `
 
 export const skills: { tool: string, level:string }[] = [
