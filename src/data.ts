@@ -26,7 +26,7 @@ As a kid I moved  abroad and spent 6 years studying, training and living in diff
 <br/>
 <br/>
 During my Bachelor's degree I specialised in Artificial Intelligence, focusing on algorithms designs, Machine Learning, Metaheuristics, Knowledge-based Systems among others. For my
-<a href="https://github.com/pabloluqueromero/TFG" class="paragraph-link" >bachelor's degree final degree project</a> I studied, proposed and coded algorithms to automate feature engineering for the construction of logical features. 
+<a target="_blank" rel="noreferrer" href="https://github.com/pabloluqueromero/TFG" class="paragraph-link" >bachelor's degree final degree project</a> I studied, proposed and coded algorithms to automate feature engineering for the construction of logical features. 
 `
 
 export const skills: { tool: string, level:string }[] = [

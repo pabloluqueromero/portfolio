@@ -36,7 +36,7 @@ function Bar(props: {skill: { tool: string, level: string },index:number}) {
         <span
         ref={refBarProgressLine}
         animation-name="animate"
-        animation-duration="1000"
+        animation-duration="500"
         animation-delay="600"
         style={{...{width: props.skill.level },...Utils.animate(inViewBar,entryBarProgressLine)}}
         ></span>

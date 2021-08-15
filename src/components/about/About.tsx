@@ -20,7 +20,7 @@ function About() {
         animation-duration="1000"
         style={Utils.animate(inViewSection, entrySection)}
       >
-        <h1 className="section-container-title">About me</h1>
+        <h1 className="section-container-title text-m">About me</h1>
         <div className="section-content-about">
           <div className="about-picture-language">
             <img className="profile-picture" src="user.jpg" alt="User"></img>

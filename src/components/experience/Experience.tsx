@@ -18,7 +18,7 @@ export default function Experience() {
         animation-duration="500"
         style={Utils.animate(inViewSection, entrySection)}
       >
-        <h1 className="section-container-title">Experience</h1>
+        <h1 className="section-container-title text-m">Experience</h1>
         <div className="experience-container">
           {jobs.map((_, index) => {
             if (index === 0)
@@ -71,7 +71,7 @@ export default function Experience() {
         animation-name="fade-up"
         animation-duration="500"
         style={Utils.animate(inViewSection, entrySection)}>
-        <h1 className="section-container-title">
+        <h1 className="section-container-title text-m">
           Experience
         </h1>
         <div className="experience-carousel">

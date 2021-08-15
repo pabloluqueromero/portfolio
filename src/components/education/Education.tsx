@@ -19,7 +19,7 @@ export default function Education() {
         animation-duration="500"
         style={Utils.animate(inViewSection, entrySection)}
       >
-        <h1 className="section-container-title">Education</h1>
+        <h1 className="section-container-title text-m">Education</h1>
         <div className="education-list-timeline">
           {education.map((educationElement, index: number) => (
             <EducationCardItem key={`educard-${index}`} educationElement={educationElement} index={index}/>

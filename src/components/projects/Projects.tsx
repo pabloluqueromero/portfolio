@@ -18,7 +18,7 @@ export default function Projects() {
         animation-duration="500"
         style={Utils.animate(inViewSection, entrySection)}
       >
-        <h1 className="section-container-title">Projects</h1>
+        <h1 className="section-container-title text-m">Projects</h1>
         <div className="project-containter">
           {projects.map((project,index) => {
             if (project.link) {

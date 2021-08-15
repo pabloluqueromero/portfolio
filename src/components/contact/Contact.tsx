@@ -45,7 +45,7 @@ export default function Contact() {
         animation-name="fade-up"
         animation-duration="500"
         style={Utils.animate(inViewSection, entrySection)}>
-        <h1 className="section-container-title">
+        <h1 className="section-container-title text-m">
           Contact me
         </h1>
 
