@@ -22,7 +22,7 @@ export default function Education() {
         <h1 className="section-container-title">Education</h1>
         <div className="education-list-timeline">
           {education.map((educationElement, index: number) => (
-            <EducationCardItem educationElement={educationElement} index={index}/>
+            <EducationCardItem key={`educard-${index}`} educationElement={educationElement} index={index}/>
           ))}
         </div>
       </div>

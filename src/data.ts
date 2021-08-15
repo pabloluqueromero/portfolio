@@ -18,7 +18,7 @@ export const education: { school: string, year: string, title: string, grade: st
 ]
 
 export const about: string = `
-Hi, my name is Pablo. After graduating from a Bachelor's degree in Computer Science, I am now pursuing a Masters in Artificial Intelligence Research while I work as a Software Engineer.
+Hi, my name is Pablo. After successfully completing a Bachelor's degree in Computer Science, I am now pursuing a Masters in Artificial Intelligence Research while I work as a Software Engineer.
 Although I have only been working for a year, I have worked in Agile teams, built web services (REST & SOAP), created batch processes, worked with the cloud-based application, AWS and many more...
 <br/>
 <br/>
@@ -54,7 +54,7 @@ export const projects: {
       title: "Snake AI",
       description:
         "Classic Snake Game with different players using search algorithms, naive approaches, and Neural Nets!",
-      image: "snake.jpg",
+      image: "projects/snake.jpg",
       alt: "Snake Game",
       link: "#",
       code: "#",
@@ -64,7 +64,7 @@ export const projects: {
       title: "ML Feature Engineering",
       description:
         "Feature Engineering automation for constructing Logical Features targeting the accuracy of the Naive Bayes Classifier",
-      image: "genetic.jpg",
+      image: "projects/genetic.jpg",
       alt: "ML Feature Engineer Genetic Algorithm ",
       link: "",
       code: "https://github.com/pabloluqueromero/TFG",
@@ -74,7 +74,7 @@ export const projects: {
       title: "Porfolio React",
       description:
         "Responsive portfolio built from scratch using React Native, Hooks and SASS! ",
-      image: "portfolio.png",
+      image: "projects/portfolio.png",
       alt: "Portfolio image react",
       link: "#",
       code:"#",
@@ -84,7 +84,7 @@ export const projects: {
       title: "Single Page App Commerce",
       description:
         "Responsive single-page application developped using Nodejs, Bootstrap and MongoDB.",
-      image: "portfolio.png",
+      image: "projects/mtracing.png",
       alt: "Home page shop",
       link: "",
       code:"#",
