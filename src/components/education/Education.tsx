@@ -1,26 +1,32 @@
-import { TerminalIcon, UsersIcon } from "@heroicons/react/solid";
+import React from "react";
+import { AcademicCapIcon } from "@heroicons/react/solid";
 import { education } from "../../data";
-import './Education.css'
+import "./Education.scss";
+import { useInView } from "react-intersection-observer";
+import Utils from "../Utils";
+import EducationCardItem from "./EducationCardItem";
 export default function Education() {
-    return (
-        <section id="education">
-            <div className="section-container">
-                <h1 className="section-title">
-                    Education
-                </h1>
-                <div className="education-list">
-                    {education.map((educationElement: { school: string, year: string, title: string, grade: string, description: string }) => (
-                        <div className="education-list-item ">
-                            <div className="education-center "><strong>{educationElement.school}</strong>{educationElement.year}</div>
-                            <div className="education-description ">
-                                <div className="education-description-element diploma "><strong>{educationElement.title}</strong></div>
-                                <div className="education-description-element grade ">Grade: {educationElement.grade}</div>
-                                <div className="education-description-element descrition ">{educationElement.description}</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+  const [refSection, inViewSection, entrySection] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  return (
+    <section className="section-container" id="education">
+      <div
+        ref={refSection}
+        className="section-subcontainer"
+        animation-name="fade-up"
+        animation-duration="500"
+        style={Utils.animate(inViewSection, entrySection)}
+      >
+        <h1 className="section-container-title">Education</h1>
+        <div className="education-list-timeline">
+          {education.map((educationElement, index: number) => (
+            <EducationCardItem educationElement={educationElement} index={index}/>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

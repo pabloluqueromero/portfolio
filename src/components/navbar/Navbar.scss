@@ -1,0 +1,322 @@
+@use "sass:map";
+@import "../../assets/scss/variables";
+.header {
+    background-color: rgba(255, 255, 255, 0.918);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 200;
+}
+
+.shadow {
+    box-shadow: 5px 0px 20px rgba(70, 69, 69, 0.945);
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.navbar-item span::first-letter {
+    color: $active;
+}
+
+.navbar-item span {
+    font-weight: bold;
+}
+
+.navbar-item:nth-child(n + 1) {
+    opacity: 0;
+    animation: fade-down ease-in-out forwards;
+    animation-duration: 800ms;
+}
+
+.navbar-item:nth-child(5) {
+    animation-delay: 2000ms;
+}
+
+.navbar-item:nth-child(4) {
+    animation-delay: 2100ms;
+}
+
+.navbar-item:nth-child(3) {
+    animation-delay: 2200ms;
+}
+
+.navbar-item:nth-child(2) {
+    animation-delay: 2300ms;
+}
+
+.navbar-item:nth-child(1) {
+    animation-delay: 2400ms;
+}
+
+@keyframes fade-down {
+    from {
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hide {
+    animation: hideNav ease-in-out forwards;
+    animation-duration: 200ms;
+}
+
+.show {
+    animation: showNav ease-in-out forwards;
+    animation-duration: 200ms;
+}
+
+@keyframes hideNav {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes showNav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar-container {
+    @extend .margin-center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.navbar-large-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.navbar {
+    @extend .flex-center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.navbar-name {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    @extend .flex-center;
+    gap: 10px;
+    padding: 0 1em;
+}
+
+.navbar-item {
+    color: black;
+    padding: 1em 1em;
+    @extend .flex-center;
+    flex: 1;
+}
+
+.navbar-item:hover,
+.navbar-name:hover {
+    color: $active;
+}
+
+.navbar-contact-item {
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    border: 0;
+    padding: 0 0.5em;
+}
+
+.navbar-contact-item:hover {
+    background-color: rgba(255, 255, 255, 0.082);
+}
+
+.navbar-contact-item:focus {
+    outline: none;
+}
+
+.arrow-icon {
+    margin-left: 3px;
+    height: 20px;
+    width: 20px;
+}
+
+.navbar-small {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    margin: 1em;
+}
+
+.navbar-item-active {
+    color: $active;
+    font-weight: bold;
+}
+
+.code-icon {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    width: 2rem;
+    cursor: pointer;
+    color: $active;
+}
+
+.navbar-name {
+    animation: rotate360 1s;
+}
+
+.navbar-name:hover {
+    animation: rotate360bis 1s;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate360bis {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    width: 60px;
+    height: 60px;
+}
+
+.download-anchor {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.download-anchor,
+.download-anchor:hover,
+.download-anchor:active,
+.download-anchor:checked {
+    color: $active;
+}
+
+.download-icon {
+    position: relative;
+    max-width: 100%;
+    padding: 1em;
+    width: 60px;
+    height: 60px;
+}
+
+.contact-link-small {
+    display: none;
+}
+
+@keyframes navbaranimation {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: map.get($breakpoints, "tablet1")) {
+    .navbar {
+        display: none;
+    }
+    .contact-link {
+        display: none;
+    }
+    .contact-link-small {
+        display: block;
+    }
+    .navbar-small {
+        background-color: rgb(246, 246, 246);
+        right: 0;
+        top: 0;
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0;
+        padding-top: 20vh;
+        align-items: center;
+    }
+    .navbar-name {
+        margin-left: 0;
+    }
+    .menu-icon {
+        display: block;
+        width: 2rem;
+        margin-left: auto;
+        margin-right: 1em;
+        cursor: pointer;
+        color: black;
+    }
+    .navbar-small-visible {
+        display: flex;
+        animation: slideright 500ms ease-in-out;
+    }
+    .navbar-item {
+        margin: 0;
+        width: 100%;
+        padding: 1em 4em;
+        flex: 0;
+        text-align: center;
+        animation: none !important;
+        opacity: 1 !important;
+    }
+    .overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.493);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: map.get($breakpoints, "tablet2")) {
+    .contact-link {
+        display: none;
+    }
+    .contact-link-small {
+        display: block;
+    }
+    .navbar-name {
+        margin-left: 0;
+    }
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

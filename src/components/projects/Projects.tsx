@@ -1,47 +1,82 @@
-
-import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import { projects } from "../../data";
+import Utils from "../Utils";
 
+import "./Projects.scss";
 export default function Projects() {
+  const [refSection, inViewSection, entrySection] = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
-        <div className="flex flex-col w-full mb-20">
-          <CodeIcon className="mx-auto inline-block w-10 mb-4" />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Apps I've Built
-          </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
-            facilis repellat ab cupiditate alias vero aliquid obcaecati quisquam
-            fuga dolore.
-          </p>
-        </div>
-        <div className="flex flex-wrap -m-4">
-          {projects.map((project) => (
-            <a
-              href={project.link}
-              key={project.image}
-              className="sm:w-1/2 w-100 p-4">
-              <div className="flex relative">
-                <img
-                  alt="gallery"
-                  className="absolute inset-0 w-full h-full object-cover object-center"
-                  src={project.image}
-                />
-                <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
-                  <h2 className="tracking-widest text-sm title-font font-medium text-green-400 mb-1">
-                    {project.subtitle}
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-white mb-3">
+    <section className="section-container" id="projects">
+      <div
+        ref={refSection}
+        className="section-subcontainer"
+        animation-name="fade-up"
+        animation-duration="500"
+        style={Utils.animate(inViewSection, entrySection)}
+      >
+        <h1 className="section-container-title">Projects</h1>
+        <div className="project-containter">
+          {projects.map((project,index) => {
+            if (project.link) {
+              return (
+                <div
+                  className="project-card"
+                  key={`proj-${index}`}
+                >
+                  <div className="project-card-img">
+                    <img src={project.image} alt={project.alt}></img>
+                    <div className="project-card-description text-m">
+                      {project.description}
+                    </div>
+                  </div>
+                  <div className="project-card-title text-m">
                     {project.title}
-                  </h1>
-                  <p className="leading-relaxed">{project.description}</p>
+                  </div>
+                  <div className="project-card-subtitle text-xs">
+                    {project.status}
+                  </div>
+
+                  <div className="project-card-links">
+                    <a className="project-card-link text-m" href={project.code}>
+                      Code
+                    </a>
+                    <div className="vertical-divider-container">
+                      <div className="vertical-divider" />
+                    </div>
+                    <a className="project-card-link text-m" href={project.link}>
+                      Website
+                    </a>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <div
+                className="project-card"
+                key={`proj-${index}`}
+              >
+                <div className="project-card-img">
+                  <img src={project.image} alt={project.alt}></img>
+                  <div className="project-card-description text-m">
+                    {project.description}
+                  </div>
+                </div>
+                <div className="project-card-title text-m">{project.title}</div>
+                <div className="project-card-subtitle text-xs">
+                  {project.status}
+                </div>
+                <div className="project-card-links">
+                  <a className="project-card-link text-m" href={project.code}>
+                    Code
+                  </a>
                 </div>
               </div>
-            </a>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

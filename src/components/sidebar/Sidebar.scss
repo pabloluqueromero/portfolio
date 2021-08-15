@@ -1,0 +1,116 @@
+@use 'sass:map';
+@import '../../assets/scss/variables';
+.sidebar-container {
+    position: fixed;
+    top: 30%;
+    left: -30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2em 0em;
+    margin: 0;
+}
+
+.sidebar-icon>i {
+    transform: scale(1.5, 1.5);
+    color: $active;
+    padding: 1em 0;
+}
+
+.sidebar-icon {
+    @extend .flex-center;
+    gap: 1rem;
+}
+
+.sidebar-icon::before {
+    content: '';
+    background-color: rgb(44, 43, 43);
+    height: 2px;
+    border-radius: 30%;
+    width: 50px;
+    display: inline-block;
+}
+
+.sidebar-icon {
+    opacity: 0;
+    animation-name: sidebaricon;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+.sidebar-icon:hover {
+    transform: scale(1.2, 1.2);
+    transition: transform 300ms ease-in-out;
+}
+
+.sidebar-icon:nth-child(1) {
+    animation-delay: 1400ms;
+}
+
+.sidebar-icon:nth-child(2) {
+    animation-delay: 1500ms;
+}
+
+.sidebar-icon:nth-child(3) {
+    animation-delay: 1600ms;
+}
+
+.sidebar-icon:nth-child(4) {
+    animation-delay: 1700ms;
+}
+
+.sidebar-icon:nth-child(1)>i {
+    color: rgb(195, 131, 12);
+}
+
+.sidebar-icon:nth-child(2)>i {
+    color: #007bb6;
+}
+
+.sidebar-icon:nth-child(3)>i {
+    color: black;
+}
+
+.sidebar-icon:nth-child(4)>i {
+    color: rgb(27, 134, 54);
+}
+
+@media screen and (max-width: map.get($breakpoints, "phone")) {
+    .sidebar-container {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        justify-content: center;
+        flex-direction: row;
+        gap: 3em;
+        background-color: transparent;
+        border-top: 1px solid rgb(206, 205, 205);
+        padding: 0;
+        padding-top: 1em;
+    }
+    .sidebar-icon:hover {
+        transform: none;
+        transition: opacity 500ms ease-in-out;
+        opacity: 0.3 !important;
+    }
+    .sidebar-icon::before {
+        display: none;
+    }
+}
+
+@keyframes sidebaricon {
+    0% {
+        opacity: 0;
+        margin-left: -50px;
+    }
+    40% {
+        opacity: 1;
+        margin-left: 100px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}

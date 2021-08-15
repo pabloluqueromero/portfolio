@@ -1,0 +1,94 @@
+@use 'sass:map';
+@import "../../assets/scss/variables";
+.project-containter {
+    @extend .flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5em;
+    padding: 2em 0em;
+}
+
+.project-card:hover {
+    transform: scale(1.05, 1.05) !important;
+    transition: 200ms ease-in-out;
+}
+
+.project-card {
+    max-width: 200px;
+    min-width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.911);
+    box-shadow: 2px 4px 10px rgba(85, 85, 85, 0.397);
+    backdrop-filter: blur(18.5px);
+    -webkit-backdrop-filter: blur(18.5px);
+    border-radius: 10px;
+    gap: 1em;
+    overflow: hidden;
+}
+
+.project-card-img {
+    width: 100%;
+    position: relative;
+}
+
+.project-card-img img {
+    width: 100%;
+}
+
+.project-card-title {
+    text-align: center;
+    font-weight: bold;
+    color: $text-dark;
+}
+
+.project-card-subtitle {
+    text-align: center;
+    font-weight: bold;
+    color: $text-light;
+}
+
+.project-card-links,
+.project-card-links a {
+    text-align: center;
+    color: $text-light;
+    padding: 0.5em 1em;
+}
+
+.project-card-links a:hover {
+    color: $active;
+    font-weight: bold;
+}
+
+z .vertical-divider {
+    @extend .margin-center;
+    height: 20px;
+    width: 2px;
+    background-color: $text-extra-extra-light;
+}
+
+.project-card-links {
+    width: 100%;
+    @extend .flex-center;
+}
+
+.project-card-links * {
+    flex: 1;
+}
+
+.project-card-description {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    @extend .flex-center;
+    text-align: center;
+}
+
+.project-card:hover .project-card-description {
+    opacity: 0.9;
+    transition: all 400ms ease-in-out;
+}

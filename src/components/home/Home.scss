@@ -1,0 +1,64 @@
+@use 'sass:map';
+@import "../../assets/scss/variables";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Rubik&display=swap");
+#home {
+    height: 100vh;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home-welcomemessage-line-1 {
+    color: $active;
+    opacity: 0;
+    animation: initialtext 1s;
+    animation-fill-mode: forwards;
+}
+
+.home-welcomemessage-line-2 {
+    opacity: 0;
+    color: $text-dark;
+    animation: initialtext 1s 300ms;
+    animation-fill-mode: forwards;
+}
+
+.home-welcomemessage-line-3 {
+    opacity: 0;
+    color: $text-light;
+    font-weight: bold;
+    animation: initialtext 1s 600ms;
+    animation-fill-mode: forwards;
+}
+
+.home-welcomemessage-line-4 {
+    opacity: 0;
+    color: $text-extra-light;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    margin-top: 1rem;
+    max-width: 600px;
+    animation: initialtext 1s 800ms;
+    animation-fill-mode: forwards;
+}
+
+.explore-button {
+    margin-left: auto;
+    opacity: 0;
+    animation: initialtext 1s 1200ms forwards;
+}
+
+@keyframes initialtext {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}

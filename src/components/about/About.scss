@@ -1,0 +1,234 @@
+@use 'sass:map';
+@use 'sass:color';
+@import '../../assets/scss/variables';
+.section-content-about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-picture-language {
+    @extend .flex-center;
+    flex: 1;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.language-container {
+    @extend .flex-center;
+    gap: 1rem;
+}
+
+.language-image-container {
+    height: 30px;
+    width: 30px;
+    @extend .flex-center;
+    border-radius: 50%;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 2px #cacaca);
+    animation: bounce 3s infinite;
+}
+
+.language-image-container:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+.language-image-container:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.language-image-container:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.language-image-container:nth-child(4) {
+    animation-delay: 400ms;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0%);
+    }
+    10% {
+        transform: translateY(-40%);
+    }
+    20% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.language-image-container img {
+    max-width: 100%;
+}
+
+.profile-picture {
+    width: 200px;
+    margin: auto;
+    filter: grayscale(70%) brightness(100%) saturate(250%) drop-shadow(4px 4px 4px rgb(156, 156, 156));
+    border-radius: 20px;
+}
+
+.about-description-skills {
+    flex: 2;
+    min-width: min(500px, 80vw);
+    overflow: hidden;
+}
+
+.paragraph {
+    text-align: justify;
+    color: $text-plain;
+    line-height: 1.25em;
+    flex: 2;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+}
+
+.skills-container {
+    @extend .flex-center;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 3em 6em;
+    @include for-phone {
+        margin: 3em 0em;
+    }
+}
+
+.skills-grid-item {
+    margin-bottom: 2em;
+    margin-left: 2em;
+    @extend .flex-center;
+    flex-direction: column;
+    @include for-phone {
+        margin-bottom: 2em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+}
+
+.skills-grid-item-text {
+    margin: auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-200%);
+    color: $text-extra-light;
+}
+
+.skills-grid-item:hover .skills-grid-item-image-container {
+    transition: all 300ms ease-in;
+    transform: translateY(-5%);
+}
+
+.skills-grid-item:hover .skills-grid-item-text {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 400ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.skills-grid-item-image-container {
+    @extend .flex-center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    padding: 5px;
+}
+
+.skills-grid-item-image-container img {
+    width: 50px;
+}
+
+.fade-up {
+    visibility: visible;
+    animation-name: fadeup;
+    animation-fill-mode: forwards;
+}
+
+.skill-bars {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.281);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    gap: 1rem;
+    padding: 2em 1em;
+    margin: 1em auto;
+    margin-top: 2em;
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    color: $text-light;
+    opacity: 0;
+}
+
+.skill-bars .bar .progress-line {
+    height: 6px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.8);
+    animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: $active;
+    animation-timing-function: cubic-bezier(1, 0, 0.5, 1);
+}
+
+@keyframes fade-up {
+    from {
+        transform: translateY(7%);
+        opacity: 0;
+        visibility: visible;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        visibility: visible;
+    }
+}
+
+@keyframes showText {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+}

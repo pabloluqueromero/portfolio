@@ -5,27 +5,25 @@ import Education from "./components/education/Education";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
-import Skills from "./components/skills/Skills";
+import Experience from "./components/experience/Experience";
 
-import './App.css';
+import './App.scss';
+import Sidebar from "./components/sidebar/Sidebar";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
+
   return (
-    <main  className="main-contianer ">
+    <main className="main-contianer ">
       <Navbar />
       <Home />
+      <About />
       <Education />
-      <Education />
-      <Education />
-      <Education />
-      <Education />
-      <Education />
-      <Education />
-      <Education />
-      {/* <About />
       <Projects />
-      <Skills />
-    <Contact /> */}
+      <Experience />
+      <Contact />
+      <Sidebar />
+      <Footer />
     </main>
   );
 }

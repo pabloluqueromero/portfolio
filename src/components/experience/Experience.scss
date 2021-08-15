@@ -1,0 +1,101 @@
+@use 'sass:map';
+@import "../../assets/scss/variables";
+$nTabsLoop: $nTabs+1;
+.experience-container {
+    display: flex;
+    position: relative;
+    max-width: 900px;
+    min-height: 300px;
+    @extend .margin-center;
+}
+
+.controls-container {
+    @extend .flex-center;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    transform: translateY(100%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-list {
+    @extend .flex-center;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    width: 100% * $nTabs;
+    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.tab-indicator {
+    $dot-size: 10px;
+    cursor: pointer;
+    width: $dot-size;
+    height: $dot-size;
+    opacity: 0.5;
+    background-color: rgb(102, 102, 102);
+    border-radius: 50%;
+    transition: 0.4s;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6em 3em;
+    gap: 3rem;
+}
+
+.job-title {
+    font-weight: bold;
+    font-style: italic;
+    color: $text-plain;
+}
+
+.job-logo {
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans serif;
+}
+
+.job-date {
+    color: $text-extra-light;
+}
+
+.job-description {
+    text-align: justify;
+    color: $text-light;
+}
+
+@for $n from 1 through $nTabsLoop {
+    #tab#{$n}:checked {
+        &~.carousel .carousel-list {
+            left: -100% * ($n - 1);
+        }
+        &~.controls-container .tab-indicator[for="tab#{$n}"] {
+            opacity: 1;
+            background-color: $active;
+        }
+    }
+}
