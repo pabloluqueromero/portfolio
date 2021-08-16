@@ -21,6 +21,7 @@ function NavBarOptions(props: { hideNavbar: () => void }) {
       spy={true}
       smooth={true}
       duration={300}
+      offset={-100}
       key={`opt-${index}`}
       onClick={props.hideNavbar}
       className="navbar-item"
