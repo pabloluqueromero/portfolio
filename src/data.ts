@@ -19,7 +19,7 @@ export const education: { school: string, year: string, title: string, grade: st
 
 export const about: string = `
 Hi, my name is Pablo. After successfully completing a Bachelor's degree in Computer Science, I am now pursuing a Masters in Artificial Intelligence Research while I work as a Software Engineer.
-Although I have only been working for a year, I have worked in Agile teams, built web services (REST & SOAP), created batch processes, worked with the cloud-based application, AWS and many more...
+Although I have only been working for a year, I have worked in Agile teams, built web services (REST & SOAP), created batch processes, worked with a cloud-based application (AWS) and many more...
 <br/>
 <br/>
 As a kid I moved  abroad and spent 6 years studying, training and living in different countries for which I can speak 4 languages fluently (and a bit of German). I would define myself as a very open-minded person with a great ability to solve problems and, most importantly, with great curiosity (especially when it comes to technologies and algorithms).
