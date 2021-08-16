@@ -7,7 +7,7 @@ import EducationCardItem from "./EducationCardItem";
 export default function Education() {
   const [refSection, inViewSection, entrySection] = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (

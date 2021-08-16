@@ -109,7 +109,7 @@ export const jobs: { title: string, logo: string, description: string, from:stri
     title: "Software Engineer Intern",
     logo: "OPINATOR",
     description: "This was my first professional experience back in 2020. I learned I huge ton about web, APIs, cloud infrastructure, real client requirements and needs and team work.",
-    from: "01.2020",
+    from: "07.2020",
     to: "10.2020"
 
   },

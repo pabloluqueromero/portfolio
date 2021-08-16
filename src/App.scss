@@ -32,8 +32,11 @@ a:visited {
 .section-container {
     @extend .flex-center;
     position: relative;
-    min-height: 90vh;
-    margin-bottom: 5rem;
+}
+
+.section-container:not(:first-of-type) {
+    margin-bottom: 6rem;
+    margin-top: 3em;
 }
 
 .section-subcontainer {
@@ -77,7 +80,7 @@ a:visited {
     .section-subcontainer {
         max-width: 90%;
     }
-    .section-container {
-        min-height: 100vh;
+    .section-container:not(:first-of-type) {
+        margin-bottom: 5rem;
     }
 }
