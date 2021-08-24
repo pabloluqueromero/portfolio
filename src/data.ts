@@ -105,6 +105,14 @@ export const socialLink = {
 
 //Modify nTabs in scss
 export const jobs: { title: string, logo: string, description: string, from:string, to:string}[] = [
+  
+  {
+    title: "Junior Software Engineer",
+    logo: "Sopra Steria",
+    description: "Currently working here as Junior Software Engineer, engaging with clients for technical advice, international teams and 100% French. Java developpement with strict code review and CD/CI pipelines",
+    from: "02.2021",
+    to: "present"
+  },
   {
     title: "Software Engineer Intern",
     logo: "OPINATOR",
@@ -112,12 +120,5 @@ export const jobs: { title: string, logo: string, description: string, from:stri
     from: "07.2020",
     to: "10.2020"
 
-  },
-  {
-    title: "Junior Software Engineer",
-    logo: "Sopra Steria",
-    description: "Currently working here as Junior Software Engineer, engaging with clients for technical advice, international teams and 100% French. Java developpement with strict code review and CD/CI pipelines",
-    from: "02.2021",
-    to: "present"
   }
 ]
