@@ -71,7 +71,7 @@ export const projects: {
       status: "Completed",
     },
     {
-      title: "Porfolio React",
+      title: "Portfolio React",
       description:
         "Responsive portfolio built from scratch using React Native, Hooks and SASS! ",
       image: "projects/portfolio.png",
