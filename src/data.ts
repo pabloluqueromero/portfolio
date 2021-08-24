@@ -83,7 +83,7 @@ export const projects: {
     {
       title: "Single Page App Commerce",
       description:
-        "Responsive single-page application developped using Nodejs, Bootstrap and MongoDB.",
+        "Responsive single-page application developed using Nodejs, Bootstrap and MongoDB.",
       image: "projects/mtracing.png",
       alt: "Home page shop",
       link: "",
@@ -109,15 +109,14 @@ export const jobs: { title: string, logo: string, description: string, from:stri
   {
     title: "Junior Software Engineer",
     logo: "Sopra Steria",
-    description: "Currently working here as Junior Software Engineer, engaging with clients for technical advice, international teams and 100% French. Java developpement with strict code review and CD/CI pipelines",
+    description: "Currently working here as Junior Software Engineer, engaging with clients for technical advice, international teams and 100% French. Java developement with strict code review and CD/CI pipelines",
     from: "02.2021",
     to: "present"
   },
   {
     title: "Software Engineer Intern",
     logo: "OPINATOR",
-    description: "This was my first professional experience back in 2020. I learned I huge ton about web, APIs, cloud infrastructure, real client requirements and needs and team work.",
-    from: "07.2020",
+    description: "This was my first professional experience back in 2020. I learned a huge deal about web development, APIs, cloud infrastructure, real client requirements and needs and teamwork.",    from: "07.2020",
     to: "10.2020"
 
   }
