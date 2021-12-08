@@ -7,7 +7,6 @@ $nTabsLoop: $nTabs+1;
     max-width: 900px;
     min-height: 300px;
     @extend .margin-center;
-    flex-direction: column;
 }
 
 .controls-container {
@@ -33,14 +32,28 @@ input[type="radio"] {
     @extend .flex-center;
     position: relative;
     list-style: none;
-    overflow-y: scroll;
+    overflow: hidden;
     padding: 0;
-    width: 100%;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    flex-basis: 0;
-    justify-content: start;
-    scrollbar-color: $active transparent;
+    width: 100% * $nTabs;
+    transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.tab-indicator {
+    $dot-size: 10px;
+    cursor: pointer;
+    width: $dot-size;
+    height: $dot-size;
+    opacity: 0.5;
+    background-color: rgb(102, 102, 102);
+    border-radius: 50%;
+    transition: 0.4s;
+    &:hover {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    &:active {
+        transform: scale(0.9);
+    }
 }
 
 .carousel-item {
@@ -52,9 +65,6 @@ input[type="radio"] {
     align-items: center;
     padding: 3em;
     gap: 3rem;
-    flex-shrink: 0;
-    flex-grow: 1;
-    scroll-snap-align: start;
 }
 
 .job-title {
@@ -78,22 +88,14 @@ input[type="radio"] {
     color: $text-light;
 }
 
-.carousel-controls {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 100%;
-}
-
-.carousel-item-control {
-    width: 20px;
-    height: 20px;
-    background-color: $text-extra-light;
-    display: flex;
-    border-radius: 50%;
-    margin: 5px 20px
-}
-
-.carousel-item-control:active {
-    background-color: $active;
+@for $n from 1 through $nTabsLoop {
+    #tab#{$n}:checked {
+        &~.carousel .carousel-list {
+            left: -100% * ($n - 1);
+        }
+        &~.controls-container .tab-indicator[for="tab#{$n}"] {
+            opacity: 1;
+            background-color: $active;
+        }
+    }
 }

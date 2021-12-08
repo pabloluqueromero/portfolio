@@ -36,6 +36,16 @@ export default function Experience() {
             );
           })}
 
+          <div className="controls-container">
+            {jobs.map((_, index) => (
+              <label
+                key={`tab-${index}`}
+                htmlFor={`tab${index + 1}`}
+                className="tab-indicator"
+              ></label>
+            ))}
+          </div>
+
           <div className="carousel">
             <div className="carousel-list">
               {jobs.map((job,index) => (
@@ -48,12 +58,6 @@ export default function Experience() {
               ))}
             </div>
           </div>
-          {/* <div className="carousel-controls">
-              {jobs.map((job,index) => (
-                <a href={`#exp-${index}`} key={`a-exp-${index}`} className="carousel-item-control"/>
-  
-              ))}
-          </div> */}
         </div>
       </div>
     </section>
